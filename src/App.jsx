@@ -43,7 +43,7 @@ function App() {
         const canvas = await html2canvas(clone, {
           scale: 2, 
           useCORS: true,
-          backgroundColor: '#F3E8FF', // Updated to match new theme
+          backgroundColor: '#F8FAFC', // Updated to off-white
           width: 1080,
           height: 1350,
           windowWidth: 1080,
@@ -76,9 +76,9 @@ function App() {
           {/* Background Decorative Grid */}
           <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, pointerEvents: 'none', zIndex: 0, overflow: 'hidden' }}>
             <svg width="1080" height="1350" viewBox="0 0 1080 1350" fill="none" xmlns="http://www.w3.org/2000/svg">
-              {/* Massive purple wave on the right */}
-              <path d="M1200 -100 C600 200 900 800 1200 1400" stroke="#E9D5FF" strokeWidth="200" opacity="0.3" fill="none" />
-              <path d="M1100 -200 C500 100 800 700 1100 1300" stroke="#C084FC" strokeWidth="100" opacity="0.2" fill="none" />
+              {/* Massive wave on the right */}
+              <path d="M1200 -100 C600 200 900 800 1200 1400" stroke="#E2E8F0" strokeWidth="200" opacity="0.3" fill="none" />
+              <path d="M1100 -200 C500 100 800 700 1100 1300" stroke="#93C5FD" strokeWidth="100" opacity="0.2" fill="none" />
               
               {/* Top Left Arcs */}
               <circle cx="0" cy="200" r="300" stroke="#3B82F6" strokeWidth="2" opacity="0.15" fill="none" />

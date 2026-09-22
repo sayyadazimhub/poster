@@ -57,9 +57,9 @@ body {
   width: 1080px;
   height: 1350px;
   background: 
-    radial-gradient(circle at 100% 0%, rgba(139, 92, 246, 0.2) 0%, transparent 50%),
-    radial-gradient(circle at 0% 100%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
-    #F3E8FF; /* Light lavender background */
+    radial-gradient(circle at 100% 0%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 0% 100%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+    #F8FAFC; /* Off-white background */
   display: flex;
   flex-direction: column;
   position: relative;
@@ -162,6 +162,7 @@ body {
   font-size: 26px;
   color: #3B82F6;
   font-weight: 800;
+  margin-top: -12px;
   margin-bottom: 15px;
 }
 
@@ -180,15 +181,15 @@ body {
   color: white;
   padding: 8px 24px;
   border-radius: 999px;
-  font-weight: 800;
-  font-size: 15px;
+  font-weight: 900;
+  font-size: 16px;
   margin-bottom: 16px;
   box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
 }
 
 .services-section {
   width: 100%;
-  margin-top: -30px;
+  margin-top: -50px;
   margin-bottom: 25px;
   position: relative;
   z-index: 10;
@@ -203,8 +204,8 @@ body {
 .left-service-item {
   display: flex;
   align-items: center;
-  gap: 12px;
-  font-size: 15px;
+  gap: 15px;
+  font-size: 18px;
   font-weight: 700;
   color: #1E293B;
 }
@@ -320,12 +321,12 @@ body {
 .box-badge {
   background: #2563EB;
   color: white;
-  padding: 6px 20px;
+  padding: 8px 24px;
   border-radius: 999px;
-  font-weight: 800;
-  font-size: 14px;
+  font-weight: 900;
+  font-size: 16px;
   position: absolute;
-  top: -15px;
+  top: -18px;
   left: 50%;
   transform: translateX(-50%);
   white-space: nowrap;
@@ -336,16 +337,16 @@ body {
 .why-list {
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  margin-top: 10px;
+  gap: 16px;
+  margin-top: 15px;
 }
 .why-item {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 13px;
+  gap: 12px;
+  font-size: 16px;
   font-weight: 700;
-  color: #334155;
+  color: #1E293B;
 }
 
 /* Icons Grid */
@@ -353,7 +354,7 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
-  margin-top: 15px;
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 .icon-cell {
@@ -361,9 +362,9 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 800;
-  color: #475569;
+  color: #1E293B;
 }
 .icon-box {
   width: 48px;
