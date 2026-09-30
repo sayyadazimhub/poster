@@ -97,37 +97,34 @@ function App() {
             </svg>
           </div>
 
-          <div className="poster-content">
+          <div className="poster-content" style={{ justifyContent: 'space-between', paddingBottom: '20px' }}>
             {/* Header */}
-            <div className="poster-header">
-              <img src="/logo.png" alt="Luminate Web Solutions" className="poster-logo" />
+            <div className="poster-header" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', gap: '5px', width: '100%', paddingLeft: '0px' }}>
+              <img src="/logo.png" alt="Luminate Icon" className="poster-logo" />
+              <img src="/logoname.png" alt="Luminate Web Solutions" style={{ height: '60px', objectFit: 'contain' }} />
             </div>
 
             {/* Middle Section */}
-            <div className="middle-section">
+            <div className="middle-section" style={{ marginBottom: '5px' }}>
               <div className="hero-left">
-                <div className="we-build-badge">
-                  WE BUILD
-                  {/* Arrow pointing down right */}
-                  <svg width="40" height="40" viewBox="0 0 24 24" style={{ position: 'absolute', right: '-45px', top: '10px' }}>
-                    <path d="M5 5 C15 5 18 10 18 18 M12 15 L18 18 L21 12" stroke="#2563EB" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
+                <div className="we-build-badge" style={{ fontSize: '18px', padding: '8px 24px', marginBottom: '15px' }}>
+                  GET YOUR WEBSITE TODAY
                 </div>
-                <h1>
-                  PROFESSIONAL<br/>
-                  <svg width="420" height="90" viewBox="0 0 420 90" style={{ display: 'block', overflow: 'visible', marginTop: '-5px' }}>
+                <h1 style={{ fontSize: '75px', lineHeight: '1.05', fontWeight: 900, color: '#1E293B', textTransform: 'uppercase', marginBottom: '10px', letterSpacing: '-1px' }}>
+                  GROW YOUR <br/>
+                  <svg width="480" height="80" style={{ display: 'inline-block', margin: '-2px 0 -6px 0' }}>
                     <defs>
-                      <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
                         <stop offset="0%" stopColor="#7C3AED" />
                         <stop offset="100%" stopColor="#2563EB" />
                       </linearGradient>
                     </defs>
-                    <text x="0" y="75" fill="url(#textGrad)" fontSize="85px" fontWeight="900" fontFamily="Inter, system-ui, sans-serif" letterSpacing="-2px">WEBSITE</text>
-                  </svg>
+                    <text x="0" y="75" fill="url(#grad)" style={{ fontSize: '80px', fontWeight: 900, fontFamily: 'Inter, sans-serif', letterSpacing: '-2px' }}>BUSINESS</text>
+                  </svg><br/>
+                  ONLINE
                 </h1>
-                <div className="hero-subhead">and grow your business online</div>
-                <p className="hero-paragraph">
-                  We create modern, responsive & SEO-friendly websites that help your business grow faster and stand out from the competition.
+                <p className="hero-paragraph" style={{ fontSize: '22px', maxWidth: '95%', marginBottom: '0' }}>
+                  We create modern, responsive & SEO-friendly websites that help your business stand out and attract more customers.
                 </p>
               </div>
 
@@ -218,98 +215,83 @@ function App() {
             </div>
 
             {/* Services Grid (Outside Middle Section) */}
-            <div className="services-section">
-              <div className="left-services-title" style={{ display: 'inline-block' }}>OUR SERVICES</div>
-              <div className="services-grid">
-                <div className="left-service-item"><div className="icon-wrapper"><Globe size={16} /></div> Website Design & Development</div>
-                <div className="left-service-item"><div className="icon-wrapper"><ShoppingCart size={16} /></div> E-Commerce Development</div>
-                <div className="left-service-item"><div className="icon-wrapper"><LayoutDashboard size={16} /></div> Landing Page Design</div>
-                <div className="left-service-item"><div className="icon-wrapper"><SearchCode size={16} /></div> SEO Optimization</div>
-                <div className="left-service-item"><div className="icon-wrapper"><Wrench size={16} /></div> Website Maintenance</div>
-                <div className="left-service-item"><div className="icon-wrapper"><Zap size={16} /></div> Speed Optimization</div>
-                <div className="left-service-item"><div className="icon-wrapper"><Globe size={16} /></div> Domain & Hosting Support</div>
+            <div className="services-section" style={{ marginTop: '15px', marginBottom: '30px' }}>
+              <div className="left-services-title" style={{ display: 'inline-block', fontSize: '20px', padding: '8px 20px', marginBottom: '15px' }}>CORE SERVICES</div>
+              <div className="services-grid" style={{ gridTemplateColumns: 'repeat(2, 1fr)', gap: '12px', marginTop: '10px' }}>
+                <div className="left-service-item" style={{ fontSize: '24px' }}><div className="icon-wrapper" style={{ padding: '8px' }}><Palette size={20} /></div> Website Design & Redesign</div>
+                <div className="left-service-item" style={{ fontSize: '24px' }}><div className="icon-wrapper" style={{ padding: '8px' }}><SearchCode size={20} /></div> SEO Optimization</div>
+                <div className="left-service-item" style={{ fontSize: '24px' }}><div className="icon-wrapper" style={{ padding: '8px' }}><Globe size={20} /></div> Hosting & Server Management</div>
+                <div className="left-service-item" style={{ fontSize: '24px' }}><div className="icon-wrapper" style={{ padding: '8px' }}><CheckCircle2 size={20} /></div> SSL & Website Security</div>
+                <div className="left-service-item" style={{ fontSize: '24px' }}><div className="icon-wrapper" style={{ padding: '8px' }}><Wrench size={20} /></div> Maintenance & Support</div>
+                <div className="left-service-item" style={{ fontSize: '24px' }}><div className="icon-wrapper" style={{ padding: '8px' }}><Mail size={20} /></div> Business Email Setup</div>
               </div>
             </div>
 
-            {/* Bottom Grid Areas */}
-            <div className="bottom-grid">
-              
-              {/* Left Column (Why Choose Us) */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-                <div className="info-box" style={{ flex: 1 }}>
-                  <div className="box-badge">WHY CHOOSE US?</div>
-                  <div className="why-list">
-                    <div className="why-item"><CheckCircle2 size={18} color="#3B82F6" /> Modern & Responsive Design</div>
-                    <div className="why-item"><CheckCircle2 size={18} color="#3B82F6" /> SEO Friendly & Fast Loading</div>
-                    <div className="why-item"><CheckCircle2 size={18} color="#3B82F6" /> 100% Mobile & Tablet Friendly</div>
-                    <div className="why-item"><CheckCircle2 size={18} color="#3B82F6" /> Secure & User Friendly</div>
-                    <div className="why-item"><CheckCircle2 size={18} color="#3B82F6" /> Unlimited Support</div>
-                    <div className="why-item"><CheckCircle2 size={18} color="#3B82F6" /> Affordable Pricing</div>
-                  </div>
-                </div>
-
-              </div>
-
-              {/* Box 2 & Promo */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-                <div className="info-box" style={{ flex: 1 }}>
-                  <div className="box-badge">WE CREATE WEBSITES FOR</div>
-                  <div className="icons-grid">
-                    <div className="icon-cell"><div className="icon-box"><Briefcase size={24} /></div>Business</div>
-                    <div className="icon-cell"><div className="icon-box"><ShoppingCart size={24} /></div>E-Commerce</div>
-                    <div className="icon-cell"><div className="icon-box"><GraduationCap size={24} /></div>Education</div>
-                    <div className="icon-cell"><div className="icon-box"><Building2 size={24} /></div>Real Estate</div>
-                    <div className="icon-cell"><div className="icon-box"><Utensils size={24} /></div>Restaurant</div>
-                    <div className="icon-cell"><div className="icon-box"><Images size={24} /></div>Portfolio</div>
-                    <div className="icon-cell"><div className="icon-box"><PenTool size={24} /></div>Blog</div>
-                    <div className="icon-cell"><div className="icon-box"><Plane size={24} /></div>Travel</div>
-                  </div>
-                </div>
+            {/* Full Width Categories Area */}
+            <div className="info-box" style={{ width: '100%', padding: '15px 25px', marginBottom: '20px' }}>
+              <div className="box-badge" style={{ fontSize: '20px', padding: '8px 24px', top: '-18px' }}>WE BUILD WEBSITES FOR</div>
+              <div className="icons-grid" style={{ gridTemplateColumns: 'repeat(3, 1fr)', gap: '25px 10px', marginTop: '25px', marginBottom: '5px' }}>
+                <div className="icon-cell" style={{ fontSize: '22px', gap: '6px' }}><div className="icon-box" style={{ width: '48px', height: '48px' }}><Activity size={24} /></div>Healthcare & Education</div>
+                <div className="icon-cell" style={{ fontSize: '22px', gap: '6px' }}><div className="icon-box" style={{ width: '48px', height: '48px' }}><Building2 size={24} /></div>Real Estate & Logistics</div>
+                <div className="icon-cell" style={{ fontSize: '22px', gap: '6px' }}><div className="icon-box" style={{ width: '48px', height: '48px' }}><Plane size={24} /></div>Travel & Tourism</div>
+                <div className="icon-cell" style={{ fontSize: '22px', gap: '6px' }}><div className="icon-box" style={{ width: '48px', height: '48px' }}><Images size={24} /></div>Media & Entertainment</div>
+                <div className="icon-cell" style={{ fontSize: '22px', gap: '6px' }}><div className="icon-box" style={{ width: '48px', height: '48px' }}><ShoppingCart size={24} /></div>E-Commerce</div>
+                <div className="icon-cell" style={{ fontSize: '22px', gap: '6px' }}><div className="icon-box" style={{ width: '48px', height: '48px' }}><Briefcase size={24} /></div>Business</div>
               </div>
             </div>
 
             {/* Full Width Contact Numbers */}
-            <div className="info-box" style={{ marginTop: '20px', marginBottom: '25px', width: '100%', padding: '24px' }}>
-              <div className="box-badge" style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '12px' }}><Phone size={16} /> CALL US TODAY</div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', gap: '12px' }}>
-                <div style={{ flex: 1, display: 'flex', justifyContent: 'flex-start', alignItems: 'center', gap: '16px', background: '#F8FAFC', padding: '10px 16px', borderRadius: '8px', border: '1px solid #E2E8F0' }}>
-                  <span style={{fontSize: '14px', fontWeight: 900, color: '#3B82F6', width: '25px'}}>IN</span>
-                  <span style={{fontSize: '15px', fontWeight: 800, color: '#1E293B'}}>+91 720 736 7455</span>
+            <div className="info-box" style={{ width: '100%', padding: '20px 25px', marginTop: '15px', marginBottom: '20px', background: 'white', border: '2px solid #E2E8F0' }}>
+              <div className="box-badge" style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '20px', padding: '10px 24px', top: '-22px', background: '#2563EB', color: 'white' }}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+                CALL OR WHATSAPP US
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'space-between', gap: '15px', marginTop: '15px' }}>
+                
+                {/* Primary: UAE */}
+                <div style={{ flex: 1.3, display: 'flex', alignItems: 'center', gap: '12px', background: '#EFF6FF', padding: '14px 16px', borderRadius: '12px', border: '2px solid #3B82F6', boxShadow: '0 4px 10px rgba(59, 130, 246, 0.15)' }}>
+                  <img src="https://flagcdn.com/ae.svg" alt="UAE Flag" style={{ width: '32px', height: '22px', borderRadius: '3px', objectFit: 'cover', boxShadow: '0 1px 3px rgba(0,0,0,0.1)' }} />
+                  <div style={{ display: 'flex', flexDirection: 'column' }}>
+                    <span style={{fontSize: '14px', fontWeight: 800, color: '#3B82F6', letterSpacing: '0.5px'}}>UAE</span>
+                    <span style={{fontSize: '18px', fontWeight: 900, color: '#1E293B'}}>+971 56 574 4992</span>
+                  </div>
                 </div>
-                <div style={{ flex: 1, display: 'flex', justifyContent: 'flex-start', alignItems: 'center', gap: '16px', background: '#F8FAFC', padding: '10px 16px', borderRadius: '8px', border: '1px solid #E2E8F0' }}>
-                  <span style={{fontSize: '14px', fontWeight: 900, color: '#3B82F6', width: '25px'}}>AU</span>
-                  <span style={{fontSize: '15px', fontWeight: 800, color: '#1E293B'}}>+61 498 568 322</span>
+
+                {/* Secondary: India */}
+                <div style={{ flex: 1, display: 'flex', alignItems: 'center', gap: '10px', background: '#F8FAFC', padding: '12px 14px', borderRadius: '12px', border: '1px solid #E2E8F0', opacity: 0.85 }}>
+                  <img src="https://flagcdn.com/in.svg" alt="India Flag" style={{ width: '24px', height: '16px', borderRadius: '3px', objectFit: 'cover', boxShadow: '0 1px 3px rgba(0,0,0,0.1)' }} />
+                  <div style={{ display: 'flex', flexDirection: 'column' }}>
+                    <span style={{fontSize: '10px', fontWeight: 800, color: '#64748B', letterSpacing: '0.5px'}}>INDIA</span>
+                    <span style={{fontSize: '14px', fontWeight: 900, color: '#1E293B'}}>+91 720 736 7455</span>
+                  </div>
                 </div>
-                <div style={{ flex: 1, display: 'flex', justifyContent: 'flex-start', alignItems: 'center', gap: '16px', background: '#F8FAFC', padding: '10px 16px', borderRadius: '8px', border: '1px solid #E2E8F0' }}>
-                  <span style={{fontSize: '14px', fontWeight: 900, color: '#3B82F6', width: '25px'}}>UAE</span>
-                  <span style={{fontSize: '15px', fontWeight: 800, color: '#1E293B'}}>+971 56 574 4992</span>
+
+                {/* Secondary: Australia */}
+                <div style={{ flex: 1, display: 'flex', alignItems: 'center', gap: '10px', background: '#F8FAFC', padding: '12px 14px', borderRadius: '12px', border: '1px solid #E2E8F0', opacity: 0.85 }}>
+                  <img src="https://flagcdn.com/au.svg" alt="Australia Flag" style={{ width: '24px', height: '16px', borderRadius: '3px', objectFit: 'cover', boxShadow: '0 1px 3px rgba(0,0,0,0.1)' }} />
+                  <div style={{ display: 'flex', flexDirection: 'column' }}>
+                    <span style={{fontSize: '10px', fontWeight: 800, color: '#64748B', letterSpacing: '0.5px'}}>AUSTRALIA</span>
+                    <span style={{fontSize: '14px', fontWeight: 900, color: '#1E293B'}}>+61 498 568 322</span>
+                  </div>
                 </div>
+
               </div>
             </div>
           </div>
           
           {/* Footer Area */}
-          <div>
-            <div className="footer-strip" style={{ display: 'flex', justifyContent: 'space-evenly', gap: '20px', padding: '24px 20px' }}>
-              <div className="footer-strip-item" style={{ fontSize: '17px' }}>
-                <div className="footer-strip-icon"><Mail size={22} /></div>
-                <div><div style={{fontSize: '12px', fontWeight: 700, opacity: 0.8}}>Email Us</div>info@luminatewebsol.com</div>
+          <div style={{ marginTop: 'auto' }}>
+            <div className="footer-strip" style={{ display: 'flex', justifyContent: 'center', gap: '50px', padding: '15px 20px', borderRadius: '20px 20px 0 0' }}>
+              <div className="footer-strip-item" style={{ fontSize: '20px' }}>
+                <div className="footer-strip-icon" style={{ padding: '4px' }}><Mail size={20} /></div>
+                <div>info@luminatewebsol.com</div>
               </div>
-              <div className="footer-strip-item" style={{ fontSize: '17px' }}>
-                <div className="footer-strip-icon"><Globe size={22} /></div>
-                <div><div style={{fontSize: '12px', fontWeight: 700, opacity: 0.8}}>Visit Our Website</div>www.luminatewebsol.com</div>
+              <div className="footer-strip-item" style={{ fontSize: '20px' }}>
+                <div className="footer-strip-icon" style={{ padding: '4px' }}><Globe size={20} /></div>
+                <div>www.luminatewebsol.com</div>
               </div>
-              <div className="footer-strip-item" style={{ fontSize: '17px' }}>
-                <div className="footer-strip-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle>
-                  </svg>
-                </div>
-                <div><div style={{fontSize: '12px', fontWeight: 700, opacity: 0.8}}>Follow Us On LinkedIn</div>linkedin.com/company/luminatewebsol</div>
-              </div>
-            </div>
-            <div className="footer-sub">
-              Let's Grow Your Business With a Powerful Website
             </div>
           </div>
           
